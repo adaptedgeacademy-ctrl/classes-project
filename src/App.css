@@ -1,0 +1,283 @@
+body {
+  background: #0a0f1c;
+  color: #e5e7eb;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero-title {
+  animation: fadeUp 0.8s ease;
+}
+
+.hero-btn {
+  transition: all 0.3s ease;
+  padding: 10px 25px;
+  font-weight: 600;
+}
+
+.hero-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(13,110,253,0.3);
+}
+
+.hero-img {
+  transition: transform 0.4s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+.carousel {
+  border-radius: 15px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* ================= BIG CARD SECTION ================= */
+.big-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.big-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.big-img {
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.big-img:hover {
+  transform: scale(1.05);
+}
+
+/* button hover */
+.hero-btn {
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 15px rgba(13,110,253,0.3);
+}
+
+/* ================= SIMPLE CARD SECTION ================= */
+.simple-card {
+  transition: 0.3s ease;
+  border-radius: 12px;
+  background: transparent; /* NO BACKGROUND as requested */
+}
+
+.simple-card:hover {
+  transform: translateY(-6px);
+}
+
+.simple-img {
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.simple-img:hover {
+  transform: scale(1.05);
+}
+
+
+/* FULL SCREEN SLIDER */
+.full-slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* IMAGE FIT */
+.slider-img {
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(60%); /* makes text visible */
+}
+
+/* CAPTION STYLE */
+.carousel-caption {
+  bottom: 35%;
+  animation: fadeUp 1s ease;
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HOVER EFFECT ON ARROWS */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  transition: 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  transform: scale(1.2);
+} 
+
+
+/* ================= MAIN FOOTER ================= */
+.footer-dark {
+  background: #0b0b0b;
+}
+
+/* TEXT */
+.footer-dark p,
+.footer-dark li {
+  color: #b5b5b5;
+}
+
+/* LINKS */
+.footer-links li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-links li:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* SOCIAL ICONS */
+.social-icons i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #b5b5b5;
+}
+
+.social-icons i:hover {
+  color: #0d6efd;
+  transform: scale(1.2);
+}
+
+/* SUB FOOTER */
+.sub-footer {
+  background: #050505;
+  color: #777;
+  font-size: 14px;
+}
+
+/* HERO SLIDER */
+.full-slider {
+  height: 100vh;
+}
+
+.slider-img {
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+/* HERO BUTTON */
+.hero-btn {
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* CARDS */
+.custom-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* BIG CARD */
+.big-card {
+  transition: 0.3s;
+}
+
+.big-card:hover {
+  transform: scale(1.02);
+}
+
+/* SIMPLE CARD */
+.simple-card {
+  transition: 0.3s;
+}
+
+.simple-card:hover {
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+.footer-dark {
+  background: #111;
+}
+
+.footer-links li {
+  margin: 6px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-links li:hover {
+  color: #0d6efd;
+  transform: translateX(5px);
+}
+
+.social-icons i {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: #0d6efd;
+  transform: scale(1.3);
+}
+
+.sub-footer {
+  background: #000;
+  font-size: 14px;
+}
