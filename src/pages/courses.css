@@ -1,0 +1,326 @@
+body{
+  background:#0b1120;
+  color:white;
+  font-family:"Segoe UI",sans-serif;
+  overflow-x:hidden;
+}
+
+/* HERO */
+
+.courses-hero{
+  position:relative;
+  padding:120px 0 90px;
+  background:
+  linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #111827
+  );
+
+  overflow:hidden;
+}
+
+.hero-content{
+  position:relative;
+  z-index:5;
+}
+
+.small-tag{
+  background:#1d4ed8;
+  padding:10px 22px;
+  border-radius:40px;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:1px;
+  display:inline-block;
+  margin-bottom:25px;
+}
+
+.courses-hero h1{
+  font-size:4.5rem;
+  font-weight:900;
+  line-height:1.2;
+}
+
+.courses-hero h1 span{
+  color:#facc15;
+}
+
+.courses-hero p{
+  max-width:750px;
+  margin:auto;
+  margin-top:25px;
+  color:#cbd5e1;
+  font-size:1.1rem;
+  line-height:1.9;
+}
+
+/* FLOATING GLOW */
+
+.floating-circle{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(120px);
+}
+
+.one{
+  width:350px;
+  height:350px;
+  background:#2563eb;
+  top:-100px;
+  left:-80px;
+  opacity:0.4;
+}
+
+.two{
+  width:300px;
+  height:300px;
+  background:#facc15;
+  bottom:-100px;
+  right:-80px;
+  opacity:0.2;
+}
+
+/* COURSES */
+
+.courses-section{
+  padding:70px 0;
+}
+
+.course-box{
+  position:relative;
+
+  height:100%;
+
+  background:
+  rgba(255,255,255,0.04);
+
+  backdrop-filter:blur(14px);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  border-radius:28px;
+
+  padding:35px;
+
+  overflow:hidden;
+
+  transition:0.45s ease;
+}
+
+.course-box:hover{
+  transform:
+  translateY(-14px)
+  scale(1.02);
+
+  box-shadow:
+  0 25px 50px rgba(0,0,0,0.4);
+}
+
+.course-glow{
+  position:absolute;
+  width:180px;
+  height:180px;
+  background:white;
+  filter:blur(120px);
+  top:-70px;
+  right:-70px;
+  opacity:0.08;
+}
+
+.course-icon{
+  width:85px;
+  height:85px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:22px;
+
+  font-size:2rem;
+
+  margin-bottom:25px;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  transition:0.4s;
+}
+
+.course-box:hover .course-icon{
+  transform:rotate(-8deg) scale(1.1);
+}
+
+.course-box h3{
+  font-size:1.8rem;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.course-meta{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.course-meta span{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  background:
+  rgba(255,255,255,0.06);
+
+  padding:10px 16px;
+
+  border-radius:30px;
+
+  font-size:14px;
+
+  color:#cbd5e1;
+}
+
+.course-box p{
+  color:#d1d5db;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+.explore-btn{
+  width:100%;
+  border:none;
+  background:white;
+  color:black;
+  padding:15px;
+  border-radius:14px;
+  font-weight:700;
+  transition:0.35s;
+}
+
+.arrow-icon{
+  margin-left:10px;
+  transition:0.35s;
+}
+
+.explore-btn:hover .arrow-icon{
+  transform:translateX(6px);
+}
+
+.explore-btn:hover{
+  background:#facc15;
+}
+
+/* CARD COLORS */
+
+.gradient-one{
+  border-top:4px solid #3b82f6;
+}
+
+.gradient-two{
+  border-top:4px solid #06b6d4;
+}
+
+.gradient-three{
+  border-top:4px solid #8b5cf6;
+}
+
+.gradient-four{
+  border-top:4px solid #22c55e;
+}
+
+.gradient-five{
+  border-top:4px solid #f97316;
+}
+
+.gradient-six{
+  border-top:4px solid #ec4899;
+}
+
+/* WHY SECTION */
+
+.why-section{
+  padding:40px 0 80px;
+}
+
+.why-title{
+  font-size:3rem;
+  font-weight:800;
+}
+
+.why-card{
+  background:
+  rgba(255,255,255,0.04);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  border-radius:24px;
+
+  padding:35px;
+
+  text-align:center;
+
+  transition:0.4s ease;
+
+  height:100%;
+}
+
+.why-card:hover{
+  transform:translateY(-10px);
+
+  background:
+  rgba(255,255,255,0.07);
+}
+
+.why-icon{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.why-card h4{
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.why-card p{
+  color:#cbd5e1;
+  line-height:1.7;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+  .courses-hero h1{
+    font-size:3rem;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .courses-hero{
+    padding:90px 0 70px;
+  }
+
+  .courses-hero h1{
+    font-size:2.4rem;
+  }
+
+  .courses-hero p{
+    font-size:1rem;
+  }
+
+  .why-title{
+    font-size:2.2rem;
+  }
+
+  .course-box{
+    padding:28px;
+  }
+
+}
