@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/static-components */
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
@@ -13,29 +14,163 @@ import {
   FaUserGraduate,
   FaAward,
 } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useState, useEffect } from "react";
 
 import "./Home.css";
 
 function Home() {
   const courses = [
     {
-      title: "CA Foundation",
-      desc: "Complete preparation with expert mentorship and test series.",
+      title: "CA",
+      subtitle: "Become a Chartered Accountant",
+      description:
+        "Master accounting, taxation, auditing, and finance to build a prestigious career as a trusted financial professional.",
+
       image:
-        "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+
+      duration: "4-5Y",
+      projects: "Articleship",
+      placement: "High",
+
+      technologies: [
+        "Accounting",
+        "Taxation",
+        "Audit",
+        "Finance"
+      ]
     },
+
     {
-      title: "CA Intermediate",
-      desc: "Advanced commerce & taxation preparation.",
+      title: "CS",
+      subtitle: "Corporate Law & Governance Expert",
+      description:
+        "Develop expertise in company law, compliance, and corporate governance to become a key advisor to organizations.",
+
+      image:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85",
+
+      duration: "3-4Y",
+      projects: "Training",
+      placement: "High",
+
+      technologies: [
+        "Corporate Law",
+        "Compliance",
+        "Governance",
+        "Secretarial Practice"
+      ]
+    },
+
+    {
+      title: "CMA",
+      subtitle: "Cost & Management Accounting",
+      description:
+        "Learn cost control, financial planning, and strategic decision-making to help businesses maximize profitability.",
+
+      image:
+        "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a",
+
+      duration: "3-4Y",
+      projects: "Training",
+      placement: "High",
+
+      technologies: [
+        "Costing",
+        "Budgeting",
+        "Finance",
+        "Analytics"
+      ]
+    },
+
+    {
+      title: "ACCA",
+      subtitle: "Global Accounting Qualification",
+      description:
+        "Gain internationally recognized accounting and finance skills and unlock career opportunities across the world.",
+
+      image:
+        "https://images.unsplash.com/photo-1556740749-887f6717d7e4",
+
+      duration: "2-3Y",
+      projects: "Case Studies",
+      placement: "Global",
+
+      technologies: [
+        "IFRS",
+        "Audit",
+        "Taxation",
+        "Finance"
+      ]
+    },
+
+    {
+      title: "CFA",
+      subtitle: "Investment & Financial Analysis",
+      description:
+        "Master investment management, equity research, and portfolio analysis for careers in global finance.",
+
+      image:
+        "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+
+      duration: "2-4Y",
+      projects: "Research",
+      placement: "Premium",
+
+      technologies: [
+        "Investments",
+        "Portfolio",
+        "Equity",
+        "Finance"
+      ]
+    },
+
+    {
+      title: "11TH COMMERCE",
+      subtitle: "Build a Strong Commerce Foundation",
+      description:
+        "Develop a clear understanding of accounts, economics, business studies, and mathematics from the beginning.",
+
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+
+      duration: "1Y",
+      projects: "Practical Learning",
+      placement: "Foundation",
+
+      technologies: [
+        "Accounts",
+        "Economics",
+        "Business Studies",
+        "Maths"
+      ]
+    },
+
+    {
+      title: "12TH COMMERCE",
+      subtitle: "Prepare for Board Exams & Professional Courses",
+      description:
+        "Score higher in board examinations while preparing for future professional courses like CA, CS, CMA, and ACCA.",
+
       image:
         "https://images.unsplash.com/photo-1513258496099-48168024aec0",
-    },
-    {
-      title: "B.Com Coaching",
-      desc: "Strong academic support for commerce students.",
-      image:
-        "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b",
-    },
+
+      duration: "1Y",
+      projects: "Board Prep",
+      placement: "Career Ready",
+
+      technologies: [
+        "Accounts",
+        "Economics",
+        "Business Studies",
+        "Preparation"
+      ]
+    }
   ];
 
   const toppers = [
@@ -56,6 +191,12 @@ function Home() {
       marks: "AIR 31 - CA Inter",
       image:
         "https://randomuser.me/api/portraits/men/51.jpg",
+    },
+    {
+      name: "Testing",
+      marks: "AIR 21 - CA Foundation",
+      image:
+        "https://randomuser.me/api/portraits/men/32.jpg",
     },
   ];
 
@@ -80,6 +221,41 @@ function Home() {
     },
   ];
 
+  function Counter({ end, suffix = "" }) {
+
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+
+      let current = 0;
+
+      const step = end / 100;
+
+      const timer = setInterval(() => {
+
+        current += step;
+
+        if (current >= end) {
+
+          setCount(end);
+
+          clearInterval(timer);
+
+        } else {
+
+          setCount(Math.floor(current));
+
+        }
+
+      }, 20);
+
+      return () => clearInterval(timer);
+
+    }, [end]);
+
+    return <>{count}{suffix}</>;
+  }
+
   return (
     <>
       {/* TOP BAR */}
@@ -94,7 +270,7 @@ function Home() {
             </span>
 
             <span>
-              <FaEnvelope /> info@neptuneacademy.com
+              <FaEnvelope /> Adaptedgeacademy@gmail.com
             </span>
 
           </div>
@@ -229,17 +405,32 @@ function Home() {
               <div className="hero-stats">
 
                 <div>
-                  <h3>5000+</h3>
+                  <h3>
+                    <Counter
+                      end={5000}
+                      suffix="+"
+                    />
+                  </h3>
                   <p>Students</p>
                 </div>
 
                 <div>
-                  <h3>98%</h3>
+                  <h3>
+                    <Counter
+                      end={98}
+                      suffix="%"
+                    />
+                  </h3>
                   <p>Results</p>
                 </div>
 
                 <div>
-                  <h3>15+</h3>
+                  <h3>
+                    <Counter
+                      end={15}
+                      suffix="+"
+                    />
+                  </h3>
                   <p>Faculty</p>
                 </div>
 
@@ -322,61 +513,74 @@ function Home() {
 
       {/* COURSES */}
 
-      <section className="section-space dark-section">
+      <section className="course-section">
+        {courses.map((course, index) => (
+          <div className="course-slide" key={index}>
+            <div className="course-left">
+              <img src={course.image} alt={course.title} />
+            </div>
 
-        <div className="container">
-
-          <div className="text-center mb-5">
-
-            <span className="small-title">
-              OUR COURSES
-            </span>
-
-            <h2 className="section-title">
-              Popular Courses
-            </h2>
-
-          </div>
-
-          <div className="row g-4">
-
-            {courses.map((course, index) => (
-              <div className="col-lg-4 col-md-6" key={index}>
-
-                <div className="course-card">
-
-                  <img
-                    src={course.image}
-                    className="course-image"
-                    alt="course"
-                  />
-
-                  <div className="course-body">
-
-                    <h4>{course.title}</h4>
-
-                    <p>{course.desc}</p>
-
-                    <button className="btn btn-warning w-100">
-                      Enquire Now
-                    </button>
-
-                  </div>
-
+            <div className="course-right">
+              <div className="course-info">
+                <div className="watermark">
+                  {String(index + 1).padStart(2, "0")}
                 </div>
 
+                <span className="course-label">
+                  Featured Program
+                </span>
+
+                <h2 className="course-title">
+                  {course.title}
+                </h2>
+
+                <h3 className="course-subtitle">
+                  {course.subtitle}
+                </h3>
+
+                <p className="course-description">
+                  {course.description}
+                </p>
+
+                <div className="tech-stack">
+                  {course.technologies.map((tech, i) => (
+                    <span key={i}>{tech}</span>
+                  ))}
+                </div>
+
+                <div className="course-stats">
+                  <div>
+                    <strong>{course.duration}</strong>
+                    <span>Duration</span>
+                  </div>
+
+                  <div>
+                    <strong>{course.projects}</strong>
+                    <span>Projects</span>
+                  </div>
+
+                  <div>
+                    <strong>{course.placement}</strong>
+                    <span>Placement</span>
+                  </div>
+                </div>
+
+                <button className="premium-btn">
+                  <span>Explore Course</span>
+
+                  <div className="icon-wrap">
+                    →
+                  </div>
+                </button>
               </div>
-            ))}
-
+            </div>
           </div>
-
-        </div>
-
+        ))}
       </section>
 
       {/* TOPPERS */}
 
-      <section className="section-space">
+      <section className="section-space topper-section">
 
         <div className="container">
 
@@ -389,25 +593,48 @@ function Home() {
             <h2 className="section-title">
               Student Achievements
             </h2>
-
           </div>
 
-          <div className="row g-4">
+          <Swiper
+            modules={[
+              Navigation,
+              Pagination,
+              Autoplay
+            ]}
+            spaceBetween={30}
+            slidesPerView={3}
+            navigation
+            pagination={{
+              clickable: true
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false
+            }}
+            loop={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1
+              },
+              768: {
+                slidesPerView: 2
+              },
+              1200: {
+                slidesPerView: 3
+              }
+            }}
+          >
 
             {toppers.map((topper, index) => (
-              <div className="col-lg-4 col-md-6" key={index}>
-
+              <SwiperSlide key={index}>
                 <div className="topper-card text-center">
-
                   <img
                     src={topper.image}
-                    alt="topper"
+                    alt={topper.name}
                     className="topper-img"
                   />
-
-                  <h4>{topper.name}</h4>
-
-                  <p>{topper.marks}</p>
+                  <h4 className="tname">{topper.name}</h4>
+                  <p className="tmarks">{topper.marks}</p>
 
                   <div className="stars">
                     ★★★★★
@@ -415,10 +642,11 @@ function Home() {
 
                 </div>
 
-              </div>
+              </SwiperSlide>
+
             ))}
 
-          </div>
+          </Swiper>
 
         </div>
 
@@ -633,26 +861,68 @@ function Home() {
 
       {/* MAP */}
 
-      <section className="map-section">
+      <section className="location-section">
 
-        <div className="map-overlay">
+        <div className="location-card">
+
+          <div className="location-badge">
+            📍 Visit Our Campus
+          </div>
 
           <h2>
-            Visit adaptedgeacademy Academy
+            AdaptEdge Academy
           </h2>
 
-          <p>
+          <p className="location-text">
             Mumbai, Maharashtra
           </p>
 
+          <div className="location-features">
+
+            <div>
+              ✓ Experienced Faculty
+            </div>
+
+            <div>
+              ✓ Modern Classrooms
+            </div>
+
+            <div>
+              ✓ Career Guidance
+            </div>
+
+          </div>
+
+          <div className="location-buttons">
+
+            <a
+              href="#"
+              className="direction-btn"
+            >
+              Get Directions
+            </a>
+
+            <a
+              href="#"
+              className="contact-btn"
+            >
+              Contact Us
+            </a>
+
+          </div>
+
         </div>
 
-        <iframe
-          title="map"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=72.8777%2C19.0760%2C72.9777%2C19.1760&layer=mapnik"
-          className="map-frame"
-          loading="lazy"
-        ></iframe>
+        <div className="map-wrapper">
+
+          <iframe
+            title="map"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=72.8777%2C19.0760%2C72.9777%2C19.1760&layer=mapnik"
+            className="map-frame"
+            loading="lazy"
+          />
+
+        </div>
 
       </section>
 
@@ -705,7 +975,7 @@ function Home() {
 
               <p>+91 9123456789</p>
 
-              <p>info@neptuneacademy.com</p>
+              <p>Adaptedgeacademy@gmail.com</p>
 
             </div>
 

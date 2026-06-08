@@ -177,7 +177,7 @@ function Courses() {
           <div className="text-center hero-content">
 
             <span className="small-tag">
-              NEPTUNE ACADEMY
+              ADOPTAGE ACADEMY
             </span>
 
             <h1>

@@ -257,7 +257,7 @@ export default function ContactPage() {
 
                 <p>+91 9123456789</p>
 
-                <p>info@neptuneacademy.com</p>
+                <p>Adaptedgeacademy@gmail.com</p>
 
               </div>
 

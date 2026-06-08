@@ -192,8 +192,8 @@ function About() {
               >
                 <h4> Our Vision</h4>
                 <p>
-                  To redefine user experience through cutting-edge web
-                  technologies and seamless design.
+                  To be the premier destination for commerce and financial education, recognized for transforming ambitious students into ethical, globally competent professionals.
+                  Our vision is to bridge the gap between academic potential and professional achievement, ensuring our students consistently lead the fields of finance, accounting, and corporate governance."
                 </p>
 
                 <h4>💡 Innovation</h4>
@@ -459,7 +459,7 @@ function About() {
 
               <p>+91 9123456789</p>
 
-              <p>info@neptuneacademy.com</p>
+              <p>Adaptedgeacademy@gmail.com</p>
 
             </div>
 
