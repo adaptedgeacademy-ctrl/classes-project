@@ -167,12 +167,12 @@ export default function ContactPage() {
 
                 <p>
                   <strong>Phone:</strong><br />
-                  +91 98765 43210
+                  +91 9167587322
                 </p>
 
                 <p>
                   <strong>Email:</strong><br />
-                  contact@classacademy.com
+                  Adaptedgeacademy@gmail.com
                 </p>
 
                 <p>
@@ -201,10 +201,10 @@ export default function ContactPage() {
 
           <iframe
             title="map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=72.8777%2C19.0760%2C72.9777%2C19.1760&layer=mapnik"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=72.8677,19.0660,72.9877,19.1860&layer=mapnik&marker=19.074032,73.002503"
             className="map-frame"
             loading="lazy"
-          ></iframe>
+          />
 
         </section>
 

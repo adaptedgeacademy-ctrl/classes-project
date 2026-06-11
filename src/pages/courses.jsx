@@ -266,7 +266,7 @@ function Courses() {
           <div className="text-center mb-5">
 
             <span className="small-tag">
-              WHY NEPTUNE
+              WHY ADOPTAGE
             </span>
 
             <h2 className="why-title">
@@ -378,11 +378,11 @@ function Courses() {
         </div>
 
         <iframe
-          title="map"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=72.8777%2C19.0760%2C72.9777%2C19.1760&layer=mapnik"
-          className="map-frame"
-          loading="lazy"
-        ></iframe>
+            title="map"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=72.8677,19.0660,72.9877,19.1860&layer=mapnik&marker=19.074032,73.002503"
+            className="map-frame"
+            loading="lazy"
+          />
 
       </section>
 

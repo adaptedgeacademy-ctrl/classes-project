@@ -565,17 +565,19 @@ function Home() {
                   </div>
                 </div>
 
-                <button className="premium-btn">
-                  <span>Explore Course</span>
 
-                  <div className="icon-wrap">
-                    →
-                  </div>
-                </button>
               </div>
+              <Link to="/courses" className="premium-btn">
+                <span>Explore Course</span>
+                <div className="icon-wrap">
+                  →
+                </div>
+              </Link>
             </div>
           </div>
+
         ))}
+
       </section>
 
       {/* TOPPERS */}
@@ -896,14 +898,7 @@ function Home() {
           <div className="location-buttons">
 
             <a
-              href="#"
-              className="direction-btn"
-            >
-              Get Directions
-            </a>
-
-            <a
-              href="#"
+              href="contact"
               className="contact-btn"
             >
               Contact Us
@@ -917,7 +912,7 @@ function Home() {
 
           <iframe
             title="map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=72.8777%2C19.0760%2C72.9777%2C19.1760&layer=mapnik"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=72.8677,19.0660,72.9877,19.1860&layer=mapnik&marker=19.074032,73.002503"
             className="map-frame"
             loading="lazy"
           />
