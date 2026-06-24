@@ -2,6 +2,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
+import CAimg from "../assets/CA.jpg"
+import CSimg from "../assets/CS.jpg"
+import CMA from "../assets/CMA.jpg"
+import CFA from "../assets/CFA.jpg"
+import elev from "../assets/11th.jpg"
+import twe from "../assets/12th.jpg"
+import aboutimg from "../assets/About us Adaptage.jpg"
+import accaimg from "../assets/Acca.jpg"
+import logo from "../assets/Nirmaan - Vasai.jpg"
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -32,7 +41,7 @@ function Home() {
         "Master accounting, taxation, auditing, and finance to build a prestigious career as a trusted financial professional.",
 
       image:
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+        CAimg,
 
       duration: "4-5Y",
       projects: "Articleship",
@@ -52,8 +61,7 @@ function Home() {
       description:
         "Develop expertise in company law, compliance, and corporate governance to become a key advisor to organizations.",
 
-      image:
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85",
+      image: CSimg,
 
       duration: "3-4Y",
       projects: "Training",
@@ -73,8 +81,7 @@ function Home() {
       description:
         "Learn cost control, financial planning, and strategic decision-making to help businesses maximize profitability.",
 
-      image:
-        "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a",
+      image: CMA,
 
       duration: "3-4Y",
       projects: "Training",
@@ -94,8 +101,7 @@ function Home() {
       description:
         "Gain internationally recognized accounting and finance skills and unlock career opportunities across the world.",
 
-      image:
-        "https://images.unsplash.com/photo-1556740749-887f6717d7e4",
+      image: accaimg,
 
       duration: "2-3Y",
       projects: "Case Studies",
@@ -115,8 +121,7 @@ function Home() {
       description:
         "Master investment management, equity research, and portfolio analysis for careers in global finance.",
 
-      image:
-        "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+      image: CFA,
 
       duration: "2-4Y",
       projects: "Research",
@@ -136,8 +141,7 @@ function Home() {
       description:
         "Develop a clear understanding of accounts, economics, business studies, and mathematics from the beginning.",
 
-      image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+      image: elev,
 
       duration: "1Y",
       projects: "Practical Learning",
@@ -157,8 +161,7 @@ function Home() {
       description:
         "Score higher in board examinations while preparing for future professional courses like CA, CS, CMA, and ACCA.",
 
-      image:
-        "https://images.unsplash.com/photo-1513258496099-48168024aec0",
+      image: twe,
 
       duration: "1Y",
       projects: "Board Prep",
@@ -288,9 +291,16 @@ function Home() {
 
         <div className="container">
 
-          <a className="navbar-brand fw-bold fs-3" href="#">
-            adaptedgeacademy
-          </a>
+          <Link
+            to="/"
+            className="navbar-brand d-flex align-items-center"
+          >
+            <img
+              src={logo}
+              alt="Adapt Edge Academy"
+              className="navbar-logo"
+            />
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -367,20 +377,18 @@ function Home() {
       {/* HERO */}
 
       <section className="hero-section">
-
         <div className="container">
-
           <div className="row align-items-center min-vh-100">
 
-            <div className="col-lg-6">
+            <div className="col-lg-7">
 
               <span className="hero-badge">
                 India's Trusted Commerce Academy
               </span>
 
               <h1 className="hero-title">
-                Build Your Career In
-                <span> CA, CS & Commerce </span>
+                Build Your Career In{" "}
+                <span>CA, CS & Commerce</span>{" "}
                 With Expert Guidance
               </h1>
 
@@ -391,7 +399,6 @@ function Home() {
               </p>
 
               <div className="d-flex gap-3 flex-wrap mt-4">
-
                 <button className="btn btn-warning hero-btn-main">
                   Start Learning
                 </button>
@@ -399,37 +406,27 @@ function Home() {
                 <button className="btn btn-outline-light hero-btn-outline">
                   View Courses
                 </button>
-
               </div>
 
               <div className="hero-stats">
 
                 <div>
                   <h3>
-                    <Counter
-                      end={5000}
-                      suffix="+"
-                    />
+                    <Counter end={5000} suffix="+" />
                   </h3>
                   <p>Students</p>
                 </div>
 
                 <div>
                   <h3>
-                    <Counter
-                      end={98}
-                      suffix="%"
-                    />
+                    <Counter end={98} suffix="%" />
                   </h3>
                   <p>Results</p>
                 </div>
 
                 <div>
                   <h3>
-                    <Counter
-                      end={15}
-                      suffix="+"
-                    />
+                    <Counter end={15} suffix="+" />
                   </h3>
                   <p>Faculty</p>
                 </div>
@@ -438,20 +435,8 @@ function Home() {
 
             </div>
 
-            <div className="col-lg-6 text-center mt-5 mt-lg-0">
-
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-                alt="students"
-                className="img-fluid hero-image"
-              />
-
-            </div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* ABOUT */}
@@ -465,7 +450,7 @@ function Home() {
             <div className="col-lg-6">
 
               <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                src={aboutimg}
                 className="img-fluid about-image"
                 alt="about"
               />

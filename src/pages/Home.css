@@ -41,15 +41,29 @@ body {
 /* HERO */
 
 .hero-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: white;
+
   background:
     linear-gradient(
-      135deg,
-      #0f172a,
-      #1e293b,
-      #0f172a
-    );
+      rgba(10, 15, 35, 0.30),
+      rgba(10, 15, 35, 0.50)
+    ),
+    url("../assets/Adaptege Banner.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* BADGE */
 .hero-badge {
   background: #1d4ed8;
   padding: 10px 18px;
@@ -59,6 +73,7 @@ body {
   font-weight: 600;
 }
 
+/* TITLE */
 .hero-title {
   font-size: 4rem;
   font-weight: 800;
@@ -69,6 +84,7 @@ body {
   color: #facc15;
 }
 
+/* TEXT */
 .hero-text {
   color: #cbd5e1;
   line-height: 1.8;
@@ -76,27 +92,58 @@ body {
   font-size: 1.1rem;
 }
 
+/* BUTTONS */
 .hero-btn-main,
 .hero-btn-outline {
   padding: 14px 30px;
   border-radius: 12px;
   font-weight: 700;
+  transition: all 0.3s ease;
 }
 
 .hero-btn-main:hover {
   transform: translateY(-4px);
 }
 
+/* IMAGE */
 .hero-image {
-  border-radius: 25px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-  transition: 0.4s;
+  width: 100%;
+  max-width: 550px;
+  border-radius: 24px;
+  object-fit: cover;
+
+  filter: brightness(0.78) contrast(1.05);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  transition: all 0.4s ease;
 }
 
 .hero-image:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+  filter: brightness(0.9) contrast(1.05);
 }
 
+/* IMAGE WRAPPER GLOW */
+.hero-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-image-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(59, 130, 246, 0.15);
+  border-radius: 50%;
+  filter: blur(80px);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* STATS */
 .hero-stats {
   display: flex;
   gap: 50px;
@@ -112,6 +159,48 @@ body {
 
 .hero-stats p {
   color: #cbd5e1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-stats {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    background-position: 90% center;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 20px;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
 }
 
 /* COMMON */
@@ -860,5 +949,23 @@ body {
   .course-stats {
     flex-direction: column;
     gap: 20px;
+  }
+}
+
+.navbar-logo {
+  height: 100px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 42px;
+  }
+
+  .brand-text {
+    font-size: 1rem;
   }
 }
