@@ -13,6 +13,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
+import logo from "../assets/Nirmaan - Vasai.jpg"
+
 
 function About() {
   const slides = [
@@ -34,109 +36,114 @@ function About() {
   ];
   return (
     <>
-      <div className="container-fluid bg-primary text-white py-2">
-        <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 gap-md-0">
+        <div className="top-bar">
+        <div className="container d-flex justify-content-between align-items-center flex-wrap">
 
-          <div className="d-flex flex-column flex-sm-row gap-3">
+          <div className="d-flex gap-4 flex-wrap">
 
-            <div className="d-flex align-items-center">
-              <FaPhoneAlt style={{ marginRight: "8px", color: "lightgreen" }} />
-              <strong>+91-912345678</strong>
-            </div>
+            <span>
+              <FaPhoneAlt /> +91 9123456789
+            </span>
 
-            <div className="d-flex align-items-center">
-              <FaEnvelope style={{ marginRight: "8px", color: "yellow" }} />
-              <strong>someone@wishone.co.in</strong>
-            </div>
+            <span>
+              <FaEnvelope /> Adaptedgeacademy@gmail.com
+            </span>
 
           </div>
 
-          <div className="mt-2 mt-md-0">
-            <strong>JOIN US NOW</strong>
+          <div>
+            Admissions Open 2026
           </div>
 
         </div>
       </div>
 
       <nav className="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
-
-        <div className="container">
-
-          <a className="navbar-brand fw-bold fs-3" href="#">
-            adaptedgeacademy
-          </a>
-
-          <button
-            className="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNav"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="mainNav">
-
-            <ul className="navbar-nav ms-auto align-items-lg-center">
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/">
-                  Home
+      
+              <div className="container">
+      
+                <Link
+                  to="/"
+                  className="navbar-brand d-flex align-items-center"
+                >
+                  <img
+                    src={logo}
+                    alt="Adapt Edge Academy"
+                    className="navbar-logo"
+                  />
                 </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/courses">
-                  Courses
-                </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/faculty">
-                  Faculty
-                </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/contact">
-                  Contact
-                </Link>
-
-              </li>
-
-              <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
-
-                <Link to="/contact">
-
-                  <button className="btn btn-warning enroll-btn">
-                    Enroll Now
-                  </button>
-
-                </Link>
-
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </nav>
+      
+                <button
+                  className="navbar-toggler"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mainNav"
+                >
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+      
+                <div className="collapse navbar-collapse" id="mainNav">
+      
+                  <ul className="navbar-nav ms-auto align-items-lg-center">
+      
+                    <li className="nav-item">
+      
+                      <Link className="nav-link" to="/">
+                        Home
+                      </Link>
+      
+                    </li>
+      
+                    <li className="nav-item">
+      
+                      <Link className="nav-link" to="/about">
+                        About
+                      </Link>
+      
+                    </li>
+      
+                    <li className="nav-item">
+      
+                      <Link className="nav-link" to="/courses">
+                        Courses
+                      </Link>
+      
+                    </li>
+      
+                    <li className="nav-item">
+      
+                      <Link className="nav-link" to="/faculty">
+                        Faculty
+                      </Link>
+      
+                    </li>
+      
+                    <li className="nav-item">
+      
+                      <Link className="nav-link" to="/contact">
+                        Contact
+                      </Link>
+      
+                    </li>
+      
+                    <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
+      
+                      <Link to="/contact">
+      
+                        <button className="btn btn-warning enroll-btn">
+                          Enroll Now
+                        </button>
+      
+                      </Link>
+      
+                    </li>
+      
+                  </ul>
+      
+                </div>
+      
+              </div>
+      
+            </nav>
 
       <div
         className="container-fluid py-5"

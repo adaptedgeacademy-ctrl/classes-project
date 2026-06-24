@@ -15,6 +15,7 @@ import {
   FaClock,
   FaStar
 } from "react-icons/fa";
+import logo from "../assets/Nirmaan - Vasai.jpg"
 
 import "./courses.css";
 
@@ -86,84 +87,91 @@ function Courses() {
     <>
 
       <nav className="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
-
-        <div className="container">
-
-          <a className="navbar-brand fw-bold fs-3" href="#">
-            adaptedgeacademy
-          </a>
-
-          <button
-            className="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNav"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="mainNav">
-
-            <ul className="navbar-nav ms-auto align-items-lg-center">
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/">
-                  Home
+      
+              <div className="container">
+      
+                <Link
+                  to="/"
+                  className="navbar-brand d-flex align-items-center"
+                >
+                  <img
+                    src={logo}
+                    alt="Adapt Edge Academy"
+                    className="navbar-logo"
+                  />
                 </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/courses">
-                  Courses
-                </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/faculty">
-                  Faculty
-                </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/contact">
-                  Contact
-                </Link>
-
-              </li>
-
-              <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
-
-                <Link to="/contact">
-
-                  <button className="btn btn-warning enroll-btn">
-                    Enroll Now
-                  </button>
-
-                </Link>
-
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </nav>
+      
+                <button
+                  className="navbar-toggler"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mainNav"
+                >
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+      
+                <div className="collapse navbar-collapse" id="mainNav">
+      
+                  <ul className="navbar-nav ms-auto align-items-lg-center">
+      
+                    <li className="nav-item">
+      
+                      <Link className="nav-link" to="/">
+                        Home
+                      </Link>
+      
+                    </li>
+      
+                    <li className="nav-item">
+      
+                      <Link className="nav-link" to="/about">
+                        About
+                      </Link>
+      
+                    </li>
+      
+                    <li className="nav-item">
+      
+                      <Link className="nav-link" to="/courses">
+                        Courses
+                      </Link>
+      
+                    </li>
+      
+                    <li className="nav-item">
+      
+                      <Link className="nav-link" to="/faculty">
+                        Faculty
+                      </Link>
+      
+                    </li>
+      
+                    <li className="nav-item">
+      
+                      <Link className="nav-link" to="/contact">
+                        Contact
+                      </Link>
+      
+                    </li>
+      
+                    <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
+      
+                      <Link to="/contact">
+      
+                        <button className="btn btn-warning enroll-btn">
+                          Enroll Now
+                        </button>
+      
+                      </Link>
+      
+                    </li>
+      
+                  </ul>
+      
+                </div>
+      
+              </div>
+      
+            </nav>
 
       {/* HERO */}
 

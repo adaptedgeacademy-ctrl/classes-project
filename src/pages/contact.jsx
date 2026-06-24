@@ -1,302 +1,186 @@
-
+import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import "animate.css";
+import logo from "../assets/Nirmaan - Vasai.jpg";
+import "./contact.css";
 
 export default function ContactPage() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+
+    for (let i = 0; i < 90; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 2,
+        dx: Math.random() - 0.5,
+        dy: Math.random() - 0.5,
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "rgba(255,255,255,0.6)";
+
+      particles.forEach((p) => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowPopup(true);
+    setTimeout(() => setShowPopup(false), 2500);
+  };
+
   return (
     <>
+      {/* PARTICLES */}
+      <canvas id="particles"></canvas>
 
+      {/* POPUP */}
+      {showPopup && (
+        <div className="popup-success animate__animated animate__zoomIn">
+          🎉 Message Sent Successfully!
+        </div>
+      )}
+
+      {/* NAVBAR */}
       <nav className="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
-
         <div className="container">
+          <Link to="/" className="navbar-brand">
+            <img src={logo} className="navbar-logo" />
+          </Link>
 
-          <a className="navbar-brand fw-bold fs-3" href="#">
-            adaptedgeacademy
-          </a>
-
-          <button
-            className="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNav"
-          >
+          <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
             <span className="navbar-toggler-icon"></span>
           </button>
 
           <div className="collapse navbar-collapse" id="mainNav">
-
             <ul className="navbar-nav ms-auto align-items-lg-center">
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/courses">
-                  Courses
-                </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/faculty">
-                  Faculty
-                </Link>
-
-              </li>
-
-              <li className="nav-item">
-
-                <Link className="nav-link" to="/contact">
-                  Contact
-                </Link>
-
-              </li>
-
-              <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
-
-                <Link to="/contact">
-
-                  <button className="btn btn-warning enroll-btn">
-                    Enroll Now
-                  </button>
-
-                </Link>
-
-              </li>
-
+              <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/courses">Courses</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/faculty">Faculty</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
             </ul>
-
           </div>
-
         </div>
-
       </nav>
-      <div className="container-fluid p-0">
-        {/* HERO SECTION */}
-        <div className="bg-dark text-white text-center py-5">
-          <h1 className="display-4 animate__animated animate__fadeInDown">
-            Contact Us
-          </h1>
-          <p className="lead animate__animated animate__fadeInUp">
-            Join our adaptedgeacademy and grow your skills with experts
-          </p>
-        </div>
 
-        {/* MAIN SECTION */}
-        <div className="container py-5">
-          <div className="row g-4">
-            {/* CONTACT FORM */}
-            <div className="col-lg-6">
-              <div className="card shadow-lg p-4 border-0 animate__animated animate__fadeInLeft">
-                <h3 className="mb-4">Send a Message</h3>
-
-                <form>
-                  <div className="mb-3">
-                    <input
-                      type="text"
-                      className="form-control form-control-lg"
-                      placeholder="Your Name"
-                    />
-                  </div>
-
-                  <div className="mb-3">
-                    <input
-                      type="email"
-                      className="form-control form-control-lg"
-                      placeholder="Your Email"
-                    />
-                  </div>
-
-                  <div className="mb-3">
-                    <input
-                      type="text"
-                      className="form-control form-control-lg"
-                      placeholder="Course Interested In"
-                    />
-                  </div>
-
-                  <div className="mb-3">
-                    <textarea
-                      className="form-control"
-                      rows="4"
-                      placeholder="Your Message"
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="btn btn-primary w-100 btn-lg hover-btn"
-                  >
-                    Submit
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            {/* CONTACT DETAILS */}
-            <div className="col-lg-6">
-              <div className="card shadow-lg p-4 border-0 animate__animated animate__fadeInRight">
-                <h3 className="mb-4">Contact Details</h3>
-
-                <p>
-                  <strong>Address:</strong><br />
-                  2nd Floor, Tech Hub Building,<br />
-                  Andheri East, Mumbai, India
-                </p>
-
-                <p>
-                  <strong>Phone:</strong><br />
-                  +91 9167587322
-                </p>
-
-                <p>
-                  <strong>Email:</strong><br />
-                  Adaptedgeacademy@gmail.com
-                </p>
-
-                <p>
-                  <strong>Timings:</strong><br />
-                  Mon - Sat: 9 AM - 8 PM
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* MAP SECTION */}
-        <section className="map-section">
-
-          <div className="map-overlay">
-
-            <h2>
-              Visit adaptedgeacademy Academy
-            </h2>
-
-            <p>
-              Mumbai, Maharashtra
-            </p>
-
-          </div>
-
-          <iframe
-            title="map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=72.8677,19.0660,72.9877,19.1860&layer=mapnik&marker=19.074032,73.002503"
-            className="map-frame"
-            loading="lazy"
-          />
-
-        </section>
-
-        {/* FOOTER */}
-
-        <footer className="footer">
-
-          <div className="container">
-
-            <div className="row g-4">
-
-              <div className="col-lg-4">
-
-                <h3>adaptedgeacademy Academy</h3>
-
-                <p>
-                  Premium coaching institute for CA, CS & Commerce students.
-                </p>
-
-                <div className="socials">
-
-                  <FaFacebookF />
-                  <FaInstagram />
-                  <FaYoutube />
-
-                </div>
-
-              </div>
-
-              <div className="col-lg-4">
-
-                <h4>Quick Links</h4>
-
-                <ul className="footer-links">
-
-                  <li>Home</li>
-                  <li>Courses</li>
-                  <li>Faculty</li>
-                  <li>Contact</li>
-
-                </ul>
-
-              </div>
-
-              <div className="col-lg-4">
-
-                <h4>Contact</h4>
-
-                <p>Mumbai, Maharashtra</p>
-
-                <p>+91 9123456789</p>
-
-                <p>Adaptedgeacademy@gmail.com</p>
-
-              </div>
-
-            </div>
-
-            <hr />
-
-            <div className="text-center">
-              © 2026 adaptedgeacademy Academy. All Rights Reserved.
-            </div>
-
-          </div>
-
-        </footer>
-
-        {/* CUSTOM STYLES */}
-        <style jsx>{`
-        .hover-btn {
-          transition: all 0.3s ease;
-        }
-
-        .hover-btn:hover {
-          transform: scale(1.05);
-          background-color: #0d6efd;
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .card:hover {
-          transform: translateY(-5px);
-          transition: 0.3s ease;
-        }
-
-        input:focus,
-        textarea:focus {
-          box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
-          border-color: #0d6efd;
-        }
-      `}</style>
+      {/* HERO */}
+      <div className="contact-hero animate__animated animate__fadeInDown">
+        <h1>Contact Us</h1>
+        <p>We’re here to guide your CA, CS & Commerce journey</p>
       </div>
+
+      {/* MAIN */}
+      <div className="container py-5">
+        <div className="row g-4">
+
+          {/* FORM */}
+          <div className="col-lg-6">
+            <div className="glass-card form-glow hover-float">
+              <h3>Send Message</h3>
+
+              <form onSubmit={handleSubmit}>
+                <input type="text" placeholder="Your Name" />
+                <input type="email" placeholder="Your Email" />
+                <input type="text" placeholder="Course Interested" />
+                <textarea rows="4" placeholder="Your Message"></textarea>
+
+                <button className="btn-glow" type="submit">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          {/* DETAILS */}
+          <div className="col-lg-6">
+            <div className="glass-card hover-float">
+              <h3>Contact Details</h3>
+
+              <p>📍 Mumbai, Maharashtra</p>
+              <p>📞 +91 9167587322</p>
+              <p>✉️ adaptedgeacademy@gmail.com</p>
+              <p>⏰ Mon - Sat: 9 AM - 8 PM</p>
+
+              <div className="socials">
+                <FaFacebookF />
+                <FaInstagram />
+                <FaYoutube />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* FOOTER */}
+      <footer className="footer">
+        <div className="container">
+          <div className="row g-4">
+
+            <div className="col-lg-4">
+              <h3>Adapt Edge Academy</h3>
+              <p>Premium coaching for CA, CS & Commerce students.</p>
+
+              <div className="socials">
+                <FaFacebookF />
+                <FaInstagram />
+                <FaYoutube />
+              </div>
+            </div>
+
+            <div className="col-lg-4">
+              <h4>Quick Links</h4>
+              <ul className="footer-links">
+                <li>Home</li>
+                <li>Courses</li>
+                <li>Faculty</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+
+            <div className="col-lg-4">
+              <h4>Contact</h4>
+              <p>Mumbai, Maharashtra</p>
+              <p>+91 9167587322</p>
+              <p>adaptedgeacademy@gmail.com</p>
+            </div>
+
+          </div>
+
+          <hr />
+          <p className="text-center">© 2026 Adapt Edge Academy</p>
+        </div>
+      </footer>
     </>
   );
 }
