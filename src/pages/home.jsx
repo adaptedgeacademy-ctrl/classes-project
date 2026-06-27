@@ -269,7 +269,7 @@ function Home() {
           <div className="d-flex gap-4 flex-wrap">
 
             <span>
-              <FaPhoneAlt /> +91 9123456789
+              <FaPhoneAlt /> +91 9167587322
             </span>
 
             <span>
@@ -953,7 +953,7 @@ function Home() {
 
               <p>Mumbai, Maharashtra</p>
 
-              <p>+91 9123456789</p>
+              <p>+91 9167587322</p>
 
               <p>Adaptedgeacademy@gmail.com</p>
 

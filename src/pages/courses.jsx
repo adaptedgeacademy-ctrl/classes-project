@@ -441,7 +441,7 @@ function Courses() {
 
               <p>Mumbai, Maharashtra</p>
 
-              <p>+91 9123456789</p>
+              <p>+91 9167587322</p>
 
               <p>info@neptuneacademy.com</p>
 
