@@ -8,7 +8,9 @@ import CMA from "../assets/CMA.jpg"
 import CFA from "../assets/CFA.jpg"
 import elev from "../assets/11th.jpg"
 import twe from "../assets/12th.jpg"
-import aboutimg from "../assets/About us Adaptage.jpg"
+// import aboutimg from "../assets/About us Adaptage.jpg"
+import aboutimg from "../assets/WhatsApp Image 2026-06-23 at 9.49.29 PM.jpeg"
+import topper from "../assets/student.jpeg"
 import accaimg from "../assets/Acca.jpg"
 import logo from "../assets/Nirmaan - Vasai.jpg"
 import {
@@ -29,6 +31,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { useState, useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 
 import "./Home.css";
 
@@ -180,8 +183,7 @@ function Home() {
     {
       name: "Rahul Jain",
       marks: "AIR 21 - CA Foundation",
-      image:
-        "https://randomuser.me/api/portraits/men/32.jpg",
+      image: topper,
     },
     {
       name: "Priya Shah",
@@ -262,6 +264,15 @@ function Home() {
   return (
     <>
       {/* TOP BAR */}
+
+      <Helmet>
+        <title>Adapt Edge Academy | Empowering Your Skills</title>
+        <meta name="description" content="Welcome to Adapt Edge Academy. Explore our professional courses designed to give you a competitive edge in your career." />
+        
+        {/* Optional: Open Graph tags for when links are shared on WhatsApp/Social Media */}
+        <meta property="og:title" content="Adapt Edge Academy | Empowering Your Skills" />
+        <meta property="og:description" content="Explore our professional courses designed to give you a competitive edge." />
+      </Helmet>
 
       <div className="top-bar">
         <div className="container d-flex justify-content-between align-items-center flex-wrap">
