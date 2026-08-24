@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import ContactPage from "./pages/contact";
 import Courses from "./pages/courses";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
          {/* <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
         <Route path="*" element={<NotFound />} /> */}
