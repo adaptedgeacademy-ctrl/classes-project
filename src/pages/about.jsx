@@ -9,31 +9,31 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import logo from "../assets/Nirmaan - Vasai.jpg"
 
 
 function About() {
-  const slides = [
-    {
-      img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-      title: "Modern Living Spaces",
-      desc: "Experience comfort and elegance with beautifully designed homes."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1494526585095-c41746248156",
-      title: "Luxury Interiors",
-      desc: "Designed to impress with premium materials and aesthetics."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
-      title: "Smart Investments",
-      desc: "Find properties that grow your future and secure your wealth."
-    }
-  ];
+  // const slides = [
+  //   {
+  //     img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+  //     title: "Modern Living Spaces",
+  //     desc: "Experience comfort and elegance with beautifully designed homes."
+  //   },
+  //   {
+  //     img: "https://images.unsplash.com/photo-1494526585095-c41746248156",
+  //     title: "Luxury Interiors",
+  //     desc: "Designed to impress with premium materials and aesthetics."
+  //   },
+  //   {
+  //     img: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+  //     title: "Smart Investments",
+  //     desc: "Find properties that grow your future and secure your wealth."
+  //   }
+  // ];
   return (
     <>
         <div className="top-bar">
@@ -306,7 +306,7 @@ function About() {
         </div>
       </div>
 
-      <div className="container-fluid" style={{ background: "#0f172a" }}>
+      {/* <div className="container-fluid" style={{ background: "#0f172a" }}>
         <Swiper
           modules={[Autoplay]}
           autoplay={{
@@ -321,7 +321,6 @@ function About() {
               <div className="container py-5">
                 <div className="row align-items-center">
 
-                  {/* LEFT IMAGE */}
                   <div className="col-md-6 mb-4 mb-md-0">
                     <img
                       src={slide.img}
@@ -330,7 +329,6 @@ function About() {
                     />
                   </div>
 
-                  {/* RIGHT TEXT */}
                   <div className="col-md-6 text-white">
                     <h1 className="slider-title">{slide.title}</h1>
                     <p className="slider-desc">{slide.desc}</p>
@@ -345,7 +343,6 @@ function About() {
             </SwiperSlide>
           ))}
 
-          {/* STYLES */}
           <style>{`
       .slider-img {
         border-radius: 20px;
@@ -392,7 +389,7 @@ function About() {
       }
     `}</style>
         </Swiper>
-      </div>
+      </div> */}
 
       <section className="map-section">
 
