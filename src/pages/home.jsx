@@ -722,7 +722,7 @@ function Home() {
                 <div className="testimonial-card">
 
                   <img
-                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQEA-SsQI0gB-oyFSjxObdwBcKWNA6Ek8J6hyWg4MRAQ&s=10"
                     className="testimonial-img"
                     alt=""
                   />
@@ -750,7 +750,7 @@ function Home() {
                 <div className="testimonial-card">
 
                   <img
-                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnlDc3S2Mh66F35OBytvsQru-bBlHR7k-20SUdEuOQtg&s=10"
                     className="testimonial-img"
                     alt=""
                   />
@@ -778,7 +778,7 @@ function Home() {
                 <div className="testimonial-card">
 
                   <img
-                    src="https://randomuser.me/api/portraits/men/51.jpg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGbMlBqsoqyCCmlsn8cvlL2P4GuFX7Pqxy5LdvQutHRw&s=10"
                     className="testimonial-img"
                     alt=""
                   />
