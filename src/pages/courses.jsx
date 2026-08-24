@@ -137,13 +137,13 @@ function Courses() {
       
                     </li>
       
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
       
                       <Link className="nav-link" to="/faculty">
                         Faculty
                       </Link>
       
-                    </li>
+                    </li> */}
       
                     <li className="nav-item">
       
@@ -246,13 +246,13 @@ function Courses() {
                     {course.desc}
                   </p>
 
-                  <button className="explore-btn">
+                  <Link to="/contact" className="explore-btn">
 
                     Explore Course
 
                     <FaArrowRight className="arrow-icon" />
 
-                  </button>
+                  </Link>
 
                 </div>
 
@@ -439,7 +439,7 @@ function Courses() {
 
               <h4>Contact</h4>
 
-              <p>Mumbai, Maharashtra</p>
+              <p> Office No. E221, VRSCCL, Block - E, Tower 3, above Vashi Railway Station, Sector 30, Vashi, Navi Mumbai, Maharashtra 400703</p>
 
               <p>+91 9167587322</p>
 

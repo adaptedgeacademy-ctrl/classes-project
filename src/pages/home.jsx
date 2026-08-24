@@ -262,7 +262,7 @@ function Home() {
       <Helmet>
         <title>Adapt Edge Academy | Empowering Your Skills</title>
         <meta name="description" content="Welcome to Adapt Edge Academy. Explore our professional courses designed to give you a competitive edge in your career." />
-        
+
         {/* Optional: Open Graph tags for when links are shared on WhatsApp/Social Media */}
         <meta property="og:title" content="Adapt Edge Academy | Empowering Your Skills" />
         <meta property="og:description" content="Explore our professional courses designed to give you a competitive edge." />
@@ -343,13 +343,13 @@ function Home() {
 
               </li>
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
 
                 <Link className="nav-link" to="/faculty">
                   Faculty
                 </Link>
 
-              </li>
+              </li> */}
 
               <li className="nav-item">
 
@@ -404,9 +404,9 @@ function Home() {
               </p>
 
               <div className="d-flex gap-3 flex-wrap mt-4">
-                <button className="btn btn-warning hero-btn-main">
+                <Link to="/courses" className="btn btn-warning hero-btn-main">
                   Start Learning
-                </button>
+                </Link>
 
                 <button className="btn btn-outline-light hero-btn-outline">
                   View Courses
@@ -843,9 +843,9 @@ function Home() {
             Join adaptedgeacademy Academy today and achieve your dream career.
           </p>
 
-          <button className="btn btn-warning cta-btn">
+          <Link to="/contact" className="btn btn-warning cta-btn">
             Apply Now <FaArrowRight />
-          </button>
+          </Link>
 
         </div>
 
@@ -886,13 +886,12 @@ function Home() {
           </div>
 
           <div className="location-buttons">
+            <Link to="/contact" className="premium-btn">
+              <span className="contact-btn">
 
-            <a
-              href="contact"
-              className="contact-btn"
-            >
-              Contact Us
-            </a>
+                Contact Us
+              </span>
+            </Link>
 
           </div>
 
@@ -956,7 +955,7 @@ function Home() {
 
               <h4>Contact</h4>
 
-              <p>Mumbai, Maharashtra</p>
+              <p> Office No. E221, VRSCCL, Block - E, Tower 3, above Vashi Railway Station, Sector 30, Vashi, Navi Mumbai, Maharashtra 400703</p>
 
               <p>+91 9167587322</p>
 

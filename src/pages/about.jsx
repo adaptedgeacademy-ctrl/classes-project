@@ -36,7 +36,7 @@ function About() {
   // ];
   return (
     <>
-        <div className="top-bar">
+      <div className="top-bar">
         <div className="container d-flex justify-content-between align-items-center flex-wrap">
 
           <div className="d-flex gap-4 flex-wrap">
@@ -59,91 +59,91 @@ function About() {
       </div>
 
       <nav className="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
-      
-              <div className="container">
-      
-                <Link
-                  to="/"
-                  className="navbar-brand d-flex align-items-center"
-                >
-                  <img
-                    src={logo}
-                    alt="Adapt Edge Academy"
-                    className="navbar-logo"
-                  />
+
+        <div className="container">
+
+          <Link
+            to="/"
+            className="navbar-brand d-flex align-items-center"
+          >
+            <img
+              src={logo}
+              alt="Adapt Edge Academy"
+              className="navbar-logo"
+            />
+          </Link>
+
+          <button
+            className="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="mainNav">
+
+            <ul className="navbar-nav ms-auto align-items-lg-center">
+
+              <li className="nav-item">
+
+                <Link className="nav-link" to="/">
+                  Home
                 </Link>
-      
-                <button
-                  className="navbar-toggler"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#mainNav"
-                >
-                  <span className="navbar-toggler-icon"></span>
-                </button>
-      
-                <div className="collapse navbar-collapse" id="mainNav">
-      
-                  <ul className="navbar-nav ms-auto align-items-lg-center">
-      
-                    <li className="nav-item">
-      
-                      <Link className="nav-link" to="/">
-                        Home
-                      </Link>
-      
-                    </li>
-      
-                    <li className="nav-item">
-      
-                      <Link className="nav-link" to="/about">
-                        About
-                      </Link>
-      
-                    </li>
-      
-                    <li className="nav-item">
-      
-                      <Link className="nav-link" to="/courses">
-                        Courses
-                      </Link>
-      
-                    </li>
-      
-                    <li className="nav-item">
-      
-                      <Link className="nav-link" to="/faculty">
-                        Faculty
-                      </Link>
-      
-                    </li>
-      
-                    <li className="nav-item">
-      
-                      <Link className="nav-link" to="/contact">
-                        Contact
-                      </Link>
-      
-                    </li>
-      
-                    <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
-      
-                      <Link to="/contact">
-      
-                        <button className="btn btn-warning enroll-btn">
-                          Enroll Now
-                        </button>
-      
-                      </Link>
-      
-                    </li>
-      
-                  </ul>
-      
-                </div>
-      
-              </div>
-      
-            </nav>
+
+              </li>
+
+              <li className="nav-item">
+
+                <Link className="nav-link" to="/about">
+                  About
+                </Link>
+
+              </li>
+
+              <li className="nav-item">
+
+                <Link className="nav-link" to="/courses">
+                  Courses
+                </Link>
+
+              </li>
+
+              {/* <li className="nav-item">
+
+                <Link className="nav-link" to="/faculty">
+                  Faculty
+                </Link>
+
+              </li> */}
+
+              <li className="nav-item">
+
+                <Link className="nav-link" to="/contact">
+                  Contact
+                </Link>
+
+              </li>
+
+              <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
+
+                <Link to="/contact">
+
+                  <button className="btn btn-warning enroll-btn">
+                    Enroll Now
+                  </button>
+
+                </Link>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </nav>
 
       <div
         className="container-fluid py-5"
@@ -393,24 +393,32 @@ function About() {
 
       <section className="map-section">
 
-        <div className="map-overlay">
-
-          <h2>
-            Visit adaptedgeacademy Academy
-          </h2>
-
-          <p>
-            Mumbai, Maharashtra
-          </p>
-
+        <div className="container py-5">
+          <div className="row justify-content-center">
+            <div className="col-12 col-md-6 col-lg-4">
+              <div className="card border-0 shadow-lg rounded-4 text-center p-4">
+                <div className="card-body p-0">
+                  <span className="badge bg-warning text-dark rounded-pill mb-3 px-3 py-2 fw-bold">
+                    📍 Location
+                  </span>
+                  <h2 className="card-title h4 fw-bold text-dark mb-2">
+                    Visit Adaptedge Academy
+                  </h2>
+                  <p className="card-text text-muted mb-4 small">
+                    Mumbai, Maharashtra
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <iframe
-            title="map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=72.8677,19.0660,72.9877,19.1860&layer=mapnik&marker=19.074032,73.002503"
-            className="map-frame"
-            loading="lazy"
-          />
+          title="map"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=72.8677,19.0660,72.9877,19.1860&layer=mapnik&marker=19.074032,73.002503"
+          className="map-frame"
+          loading="lazy"
+        />
 
       </section>
 
@@ -459,7 +467,7 @@ function About() {
 
               <h4>Contact</h4>
 
-              <p>Mumbai, Maharashtra</p>
+              <p> Office No. E221, VRSCCL, Block - E, Tower 3, above Vashi Railway Station, Sector 30, Vashi, Navi Mumbai, Maharashtra 400703</p>
 
               <p>+91 9167587322</p>
 
