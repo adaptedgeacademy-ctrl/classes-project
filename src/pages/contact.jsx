@@ -126,7 +126,7 @@ export default function ContactPage() {
             <div className="glass-card hover-float">
               <h3>Contact Details</h3>
 
-              <p>📍 Mumbai, Maharashtra</p>
+              <p>📍 Office No. E221, VRSCCL, Block - E, Tower 3, above Vashi Railway Station, Sector 30, Vashi, Navi Mumbai, Maharashtra 400703</p>
               <p>📞 +91 9167587322</p>
               <p>✉️ adaptedgeacademy@gmail.com</p>
               <p>⏰ Mon - Sat: 9 AM - 8 PM</p>
@@ -178,7 +178,7 @@ export default function ContactPage() {
           </div>
 
           <hr />
-          <p className="text-center">© 2026 Adapt Edge Academy</p>
+          <p className="text-center">© 2026 adaptedgeacademy Academy. All Rights Reserved.</p>
         </div>
       </footer>
     </>
