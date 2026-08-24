@@ -152,6 +152,14 @@ function Courses() {
                       </Link>
       
                     </li>
+
+                    <li className="nav-item">
+
+                <Link className="nav-link" to="/privacy-policy">
+                  Privacy Policy
+                </Link>
+
+              </li>
       
                     <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
       
