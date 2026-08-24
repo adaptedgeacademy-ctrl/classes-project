@@ -204,19 +204,19 @@ function Home() {
       name: "CA Rahul Verma",
       subject: "Accounts & Taxation",
       image:
-        "https://randomuser.me/api/portraits/men/41.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3yrYrlmWvYAIgKCAI-XViMe3PsHsKT09Q1r3Jpqj4tQ&s=10",
     },
     {
       name: "CA Sneha Shah",
       subject: "Law & Auditing",
       image:
-        "https://randomuser.me/api/portraits/women/52.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLaiJoKOZO0Ww3JyBIvkzIxhVZFiVk7J8TymVAhlzrtg&s=10",
     },
     {
       name: "Prof. Aditya Joshi",
       subject: "Economics",
       image:
-        "https://randomuser.me/api/portraits/men/55.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzInF8B0ATKne6JG7-r33IGEApZh8I9MtQg7unHw4pyg&s=10",
     },
   ];
 
