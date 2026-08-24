@@ -1,0 +1,122 @@
+.location-section {
+  background-color: #070b16;
+  color: #f8fafc;
+}
+
+.location-glow-mesh {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, rgba(7, 11, 22, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.location-badge-top {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.live-radar-ping {
+  width: 8px;
+  height: 8px;
+  background-color: #f59e0b;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  animation: radar-pulse 1.8s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes radar-pulse {
+  to {
+    box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+  }
+}
+
+.location-glass-card {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.location-glass-card:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.feature-item-row {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.25s ease;
+}
+
+.feature-item-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(245, 158, 11, 0.25);
+  transform: translateX(4px);
+}
+
+.meta-strip {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-action {
+  transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
+}
+
+.btn-outline-glass {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.btn-outline-glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.shadow-glow-sm {
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
+}
+
+.map-frame-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.map-glass-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(7, 11, 22, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 14px;
+  border-radius: 50px;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.map-iframe {
+  filter: contrast(102%) brightness(95%);
+  transition: filter 0.3s ease;
+}
+
+.extra-small {
+  font-size: 0.75rem;
+}
+
+.max-w-600 {
+  max-width: 600px;
+}
