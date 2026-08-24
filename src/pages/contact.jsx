@@ -170,7 +170,7 @@ export default function ContactPage() {
 
             <div className="col-lg-4">
               <h4>Contact</h4>
-              <p>Mumbai, Maharashtra</p>
+              <p> Office No. E221, VRSCCL, Block - E, Tower 3, above Vashi Railway Station, Sector 30, Vashi, Navi Mumbai, Maharashtra 400703</p>
               <p>+91 9167587322</p>
               <p>adaptedgeacademy@gmail.com</p>
             </div>
