@@ -318,36 +318,7 @@ function PrivacyPolicy() {
         </Swiper>
       </div> */}
 
-      <section className="map-section">
-
-        <div className="container py-5">
-          <div className="row justify-content-center">
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="card border-0 shadow-lg rounded-4 text-center p-4">
-                <div className="card-body p-0">
-                  <span className="badge bg-warning text-dark rounded-pill mb-3 px-3 py-2 fw-bold">
-                    📍 Location
-                  </span>
-                  <h2 className="card-title h4 fw-bold text-dark mb-2">
-                    Visit Adaptedge Academy
-                  </h2>
-                  <p className="card-text text-muted mb-4 small">
-                    Mumbai, Maharashtra
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <iframe
-          title="map"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=72.8677,19.0660,72.9877,19.1860&layer=mapnik&marker=19.074032,73.002503"
-          className="map-frame"
-          loading="lazy"
-        />
-
-      </section>
+     
 
       {/* FOOTER */}
 
