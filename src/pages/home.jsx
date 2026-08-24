@@ -320,11 +320,11 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Adapt Edge Academy | Empowering Your Skills</title>
-        <meta name="description" content="Welcome to Adapt Edge Academy. Explore our professional courses designed to give you a competitive edge in your career." />
+        <title>Adaptedge Academy | Empowering Your Skills</title>
+        <meta name="description" content="Welcome to Adaptedge Academy. Explore our professional courses designed to give you a competitive edge in your career." />
 
         {/* Optional: Open Graph tags for when links are shared on WhatsApp/Social Media */}
-        <meta property="og:title" content="Adapt Edge Academy | Empowering Your Skills" />
+        <meta property="og:title" content="Adaptedge Academy | Empowering Your Skills" />
         <meta property="og:description" content="Explore our professional courses designed to give you a competitive edge." />
       </Helmet>
 
@@ -488,7 +488,7 @@ function Home() {
               </h2>
 
               <p className="section-text">
-                adaptedgeacademy Academy is one of the leading commerce
+                adaptedge Academy is one of the leading commerce
                 coaching institutes focused on CA, CS, B.Com
                 and XI/XII Commerce preparation.
               </p>
