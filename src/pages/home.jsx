@@ -181,8 +181,8 @@ function Home() {
 
   const toppers = [
     {
-      name: "Rahul Jain",
-      marks: "AIR 21 - CA Foundation",
+      name: "Avni Bhyankar ",
+      marks: "97% And 99 in accounts",
       image: topper,
     },
     {
