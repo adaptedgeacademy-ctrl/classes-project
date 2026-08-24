@@ -176,9 +176,7 @@ function PrivacyPolicy() {
 
         <h1>Privacy Policy</h1>
 
-        <p className="privacy-updated">
-          Last updated: August 24, 2026
-        </p>
+       
 
         <section className="privacy-section">
           <h2>1. Introduction</h2>
