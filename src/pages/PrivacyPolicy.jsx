@@ -249,9 +249,6 @@ function PrivacyPolicy() {
              
             </motion.div>
 
-           
-            
-
           </div>
         </div>
       </div>
