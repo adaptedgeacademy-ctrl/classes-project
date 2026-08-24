@@ -88,6 +88,7 @@ export default function ContactPage() {
               <li className="nav-item"><Link className="nav-link" to="/courses">Courses</Link></li>
               <li className="nav-item"><Link className="nav-link" to="/faculty">Faculty</Link></li>
               <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/privacy-policy">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
