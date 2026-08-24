@@ -191,7 +191,7 @@ function Home() {
 
   const toppers = [
     {
-      name: "Avni Bhyankar ",
+      name: "Manasvi Saraogi",
       marks: "97% And 99 in accounts",
       image: topper,
     },
