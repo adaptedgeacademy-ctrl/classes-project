@@ -189,20 +189,14 @@ function Home() {
       name: "Priya Shah",
       marks: "95% - Commerce Boards",
       image:
-        "https://randomuser.me/api/portraits/women/44.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTucuJ3K4wb872C4ggpatinfzeYFtr6m7WF-RG75zvY3g&s=10",
     },
     {
       name: "Aditya Mehta",
       marks: "AIR 31 - CA Inter",
       image:
-        "https://randomuser.me/api/portraits/men/51.jpg",
-    },
-    {
-      name: "Testing",
-      marks: "AIR 21 - CA Foundation",
-      image:
-        "https://randomuser.me/api/portraits/men/32.jpg",
-    },
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCh0lNisFErTStjB0DL9z8eCq3gBjcWXoQnSDY9x9Ag&s=10",
+    }
   ];
 
   const faculty = [
