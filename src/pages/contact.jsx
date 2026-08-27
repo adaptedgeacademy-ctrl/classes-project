@@ -2,14 +2,43 @@ import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaYoutube, FaLock,FaEnvelope,FaGraduationCap, FaChevronRight, FaShieldAlt, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { 
+  FaFacebookF, 
+  FaInstagram, 
+  FaYoutube, 
+  FaLock, 
+  FaEnvelope, 
+  FaGraduationCap, 
+  FaChevronRight, 
+  FaShieldAlt, 
+  FaMapMarkerAlt, 
+  FaPhoneAlt 
+} from "react-icons/fa";
 import "animate.css";
 import logo from "../assets/Nirmaan - Vasai.jpg";
 import "./contact.css";
 
+// ⚠️ Replace this string with your Google Apps Script Web App URL
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyJusLB0CebM1mJ3CNhZydoG8Jg7FJLHwhtO-Ed1e2QqL6djg2CV6cWXMJPQuLmmSxF/exec";
+
 export default function ContactPage() {
   const [showPopup, setShowPopup] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Controlled form state
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    course: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   useEffect(() => {
     const canvas = document.getElementById("particles");
@@ -64,12 +93,35 @@ export default function ContactPage() {
     };
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!agreedToTerms) return;
+    if (!agreedToTerms || isSubmitting) return;
 
-    setShowPopup(true);
-    setTimeout(() => setShowPopup(false), 2500);
+    setIsSubmitting(true);
+
+    try {
+      // Send form data to Google Apps Script Web App URL
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors", // Bypasses CORS restrictions on Google Apps Script endpoints
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Show success popup and reset form
+      setShowPopup(true);
+      setFormData({ name: "", phone: "", email: "", course: "", message: "" });
+      setAgreedToTerms(false);
+      
+      setTimeout(() => setShowPopup(false), 2500);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit form. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -122,10 +174,46 @@ export default function ContactPage() {
               <h3>Send Message</h3>
 
               <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-                <input type="text" placeholder="Course Interested" required />
-                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <input 
+                  type="text" 
+                  name="name" 
+                  placeholder="Your Name" 
+                  value={formData.name} 
+                  onChange={handleChange} 
+                  required 
+                />
+                <input 
+                  type="tel" 
+                  name="phone" 
+                  placeholder="Your Phone Number" 
+                  value={formData.phone} 
+                  onChange={handleChange} 
+                  required 
+                />
+                <input 
+                  type="email" 
+                  name="email" 
+                  placeholder="Your Email" 
+                  value={formData.email} 
+                  onChange={handleChange} 
+                  required 
+                />
+                <input 
+                  type="text" 
+                  name="course" 
+                  placeholder="Course Interested" 
+                  value={formData.course} 
+                  onChange={handleChange} 
+                  required 
+                />
+                <textarea 
+                  rows="4" 
+                  name="message" 
+                  placeholder="Your Message" 
+                  value={formData.message} 
+                  onChange={handleChange} 
+                  required
+                ></textarea>
 
                 {/* PRIVACY POLICY CHECKBOX */}
                 <div className="checkbox-container d-flex align-items-center gap-2 mt-3">
@@ -146,12 +234,12 @@ export default function ContactPage() {
                 </div>
 
                 <button
-                  className={`btn-glow ${!agreedToTerms ? "disabled-btn" : ""}`}
+                  className={`btn-glow ${(!agreedToTerms || isSubmitting) ? "disabled-btn" : ""}`}
                   type="submit"
-                  disabled={!agreedToTerms}
+                  disabled={!agreedToTerms || isSubmitting}
                 >
                   {!agreedToTerms && <FaLock className="me-2" size={13} />}
-                  {agreedToTerms ? "Send Message" : "Accept Terms to Send"}
+                  {isSubmitting ? "Sending..." : agreedToTerms ? "Send Message" : "Accept Terms to Send"}
                 </button>
               </form>
             </div>
@@ -180,13 +268,11 @@ export default function ContactPage() {
 
       {/* FOOTER */}
       <footer className="footer position-relative overflow-hidden pt-5 pb-3">
-        {/* Ambient Background Glow */}
         <div className="footer-glow-mesh"></div>
 
         <div className="container position-relative z-2">
           <div className="row g-4 mb-5">
 
-            {/* Brand & Mission Column */}
             <div className="col-lg-4 col-md-6">
               <Link to="/" className="d-inline-flex align-items-center gap-3 mb-3 text-decoration-none">
                 <div className="footer-logo-frame">
@@ -202,7 +288,6 @@ export default function ContactPage() {
                 Premier commerce coaching institute dedicated to transforming aspiring students into industry-leading CA, CS, and corporate finance professionals.
               </p>
 
-              {/* Social Icons */}
               <div className="d-flex gap-2">
                 <a href="#facebook" className="social-btn" aria-label="Facebook">
                   <FaFacebookF />
@@ -216,7 +301,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Quick Links Column */}
             <div className="col-lg-3 col-md-6 col-6">
               <h5 className="footer-section-title text-white fw-bold mb-3 d-flex align-items-center gap-2">
                 <FaGraduationCap className="text-warning" /> Navigation
@@ -250,14 +334,12 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            {/* Contact Details Column (Interactive Glass Cards) */}
             <div className="col-lg-5 col-md-12">
               <h5 className="footer-section-title text-white fw-bold mb-3">
                 Campus & Inquiries
               </h5>
 
               <div className="d-flex flex-column gap-2">
-                {/* Address Card */}
                 <div className="footer-contact-card p-3 rounded-3 d-flex align-items-start gap-3">
                   <div className="contact-icon-box text-warning mt-1">
                     <FaMapMarkerAlt size={16} />
@@ -267,7 +349,6 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* Helpline & Email in responsive flex */}
                 <div className="row g-2">
                   <div className="col-sm-6">
                     <a href="tel:+919167587322" className="footer-contact-card p-2 px-3 rounded-3 d-flex align-items-center gap-2 text-decoration-none h-100">
@@ -287,10 +368,8 @@ export default function ContactPage() {
 
           </div>
 
-          {/* Gradient Divider Line */}
           <div className="footer-divider mb-4"></div>
 
-          {/* Bottom Bar */}
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-white-50 extra-small">
             <span>© 2026 Adapt Edge Academy. All Rights Reserved.</span>
             <span className="footer-accreditation">

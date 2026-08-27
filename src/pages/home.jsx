@@ -462,61 +462,43 @@ function Home() {
       {/* ABOUT */}
 
       <section className="section-space">
-
         <div className="container">
-
           <div className="row align-items-center g-5">
-
             <div className="col-lg-6">
-
               <img
                 src={aboutimg}
                 className="img-fluid about-image"
                 alt="about"
               />
-
             </div>
-
             <div className="col-lg-6">
-
               <span className="small-title">
                 ABOUT US
               </span>
-
               <h2 className="section-title">
                 About adaptedgeacademy
               </h2>
-
               <p className="section-text">
                 adaptedge Academy is one of the leading commerce
                 coaching institutes focused on CA, CS, B.Com
                 and XI/XII Commerce preparation.
               </p>
-
               <div className="feature-box">
                 <FaBookOpen />
                 <span>Weekly Test Series</span>
               </div>
-
               <div className="feature-box">
                 <FaChalkboardTeacher />
                 <span>Expert Faculty</span>
               </div>
-
               <div className="feature-box">
                 <FaUserGraduate />
                 <span>Career Mentorship</span>
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
-
-      {/* COURSES */}
 
       <section className="course-section">
         {courses.map((course, index) => (
@@ -524,53 +506,42 @@ function Home() {
             <div className="course-left">
               <img src={course.image} alt={course.title} />
             </div>
-
             <div className="course-right">
               <div className="course-info">
                 <div className="watermark">
                   {String(index + 1).padStart(2, "0")}
                 </div>
-
                 <span className="course-label">
                   Featured Program
                 </span>
-
                 <h2 className="course-title">
                   {course.title}
                 </h2>
-
                 <h3 className="course-subtitle">
                   {course.subtitle}
                 </h3>
-
                 <p className="course-description">
                   {course.description}
                 </p>
-
                 <div className="tech-stack">
                   {course.technologies.map((tech, i) => (
                     <span key={i}>{tech}</span>
                   ))}
                 </div>
-
                 <div className="course-stats">
                   <div>
                     <strong>{course.duration}</strong>
                     <span>Duration</span>
                   </div>
-
                   <div>
                     <strong>{course.projects}</strong>
                     <span>Projects</span>
                   </div>
-
                   <div>
                     <strong>{course.placement}</strong>
                     <span>Placement</span>
                   </div>
                 </div>
-
-
               </div>
               <Link to="/courses" className="premium-btn">
                 <span>Explore Course</span>
@@ -580,28 +551,19 @@ function Home() {
               </Link>
             </div>
           </div>
-
         ))}
-
       </section>
 
-      {/* TOPPERS */}
-
       <section className="section-space topper-section">
-
         <div className="container">
-
           <div className="text-center mb-5">
-
             <span className="small-title">
               OUR TOPPERS
             </span>
-
             <h2 className="section-title">
               Student Achievements
             </h2>
           </div>
-
           <Swiper
             modules={[
               Navigation,
