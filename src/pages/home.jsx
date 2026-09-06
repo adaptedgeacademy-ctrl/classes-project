@@ -16,7 +16,6 @@ import logo from "../assets/Nirmaan - Vasai.jpg"
 import {
   FaPhoneAlt,
   FaEnvelope,
-  FaFacebookF,
   FaInstagram,
   FaYoutube,
   FaArrowRight,
@@ -32,7 +31,9 @@ import {
   FaCheckCircle,
   FaChevronRight,
   FaShieldAlt,
-  FaMapMarkerAlt
+  FaMapMarkerAlt,
+  FaTelegram,
+  FaWhatsapp
 } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -207,27 +208,6 @@ function Home() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCh0lNisFErTStjB0DL9z8eCq3gBjcWXoQnSDY9x9Ag&s=10",
     }
   ];
-
-  // const faculty = [
-  //   {
-  //     name: "CA Rahul Verma",
-  //     subject: "Accounts & Taxation",
-  //     image:
-  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3yrYrlmWvYAIgKCAI-XViMe3PsHsKT09Q1r3Jpqj4tQ&s=10",
-  //   },
-  //   {
-  //     name: "CA Sneha Shah",
-  //     subject: "Law & Auditing",
-  //     image:
-  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLaiJoKOZO0Ww3JyBIvkzIxhVZFiVk7J8TymVAhlzrtg&s=10",
-  //   },
-  //   {
-  //     name: "Prof. Aditya Joshi",
-  //     subject: "Economics",
-  //     image:
-  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzInF8B0ATKne6JG7-r33IGEApZh8I9MtQg7unHw4pyg&s=10",
-  //   },
-  // ];
 
   const testimonials = [
     {
@@ -621,52 +601,6 @@ function Home() {
 
       </section>
 
-      {/* FACULTY */}
-
-      {/* <section className="section-space dark-section">
-
-        <div className="container">
-
-          <div className="text-center mb-5">
-
-            <span className="small-title">
-              OUR FACULTY
-            </span>
-
-            <h2 className="section-title">
-              Meet Our Teachers
-            </h2>
-
-          </div>
-
-          <div className="row g-4">
-
-            {faculty.map((teacher, index) => (
-              <div className="col-lg-4 col-md-6" key={index}>
-
-                <div className="faculty-card text-center">
-
-                  <img
-                    src={teacher.image}
-                    className="faculty-img"
-                    alt="faculty"
-                  />
-
-                  <h4>{teacher.name}</h4>
-
-                  <p>{teacher.subject}</p>
-
-                </div>
-
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-
-      </section> */}
-
       {/* TESTIMONIALS */}
 
       <section className="section-space testimonial-section position-relative overflow-hidden py-5">
@@ -837,14 +771,17 @@ function Home() {
 
               {/* Social Icons */}
               <div className="d-flex gap-2">
-                <a href="#facebook" className="social-btn" aria-label="Facebook">
-                  <FaFacebookF />
+                <a href="https://t.me/+fZJqsFrZQJFIMGVI" className="social-btn" aria-label="Facebook">
+                  <FaTelegram />
                 </a>
-                <a href="#instagram" className="social-btn" aria-label="Instagram">
+                <a href="https://www.instagram.com/adaptedgeacademy?igsh=ZjN6cHB0aTVtaXYy" className="social-btn" aria-label="Instagram">
                   <FaInstagram />
                 </a>
-                <a href="#youtube" className="social-btn" aria-label="YouTube">
+                <a href="https://www.youtube.com/@minasharma9832" className="social-btn" aria-label="YouTube">
                   <FaYoutube />
+                </a>
+                <a href="https://whatsapp.com/channel/0029Vb7zMxx8kyyHrmlaol0q" className="social-btn" aria-label="YouTube">
+                  <FaWhatsapp />
                 </a>
               </div>
             </div>
@@ -932,6 +869,33 @@ function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Fixed WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/919167587322"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        style={{
+          position: "fixed",
+          bottom: "30px",
+          right: "30px",
+          backgroundColor: "#25D366",
+          color: "#fff",
+          borderRadius: "50%",
+          width: "60px",
+          height: "60px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "32px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+          zIndex: 9999,
+          textDecoration: "none"
+        }}
+      >
+        <FaWhatsapp />
+      </a>
     </>
   );
 }

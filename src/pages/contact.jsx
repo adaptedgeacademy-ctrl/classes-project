@@ -2,17 +2,19 @@ import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
-import { 
-  FaFacebookF, 
-  FaInstagram, 
-  FaYoutube, 
-  FaLock, 
-  FaEnvelope, 
-  FaGraduationCap, 
-  FaChevronRight, 
-  FaShieldAlt, 
-  FaMapMarkerAlt, 
-  FaPhoneAlt 
+import {
+  FaFacebookF,
+  FaTelegram,
+  FaWhatsapp,
+  FaInstagram,
+  FaYoutube,
+  FaLock,
+  FaEnvelope,
+  FaGraduationCap,
+  FaChevronRight,
+  FaShieldAlt,
+  FaMapMarkerAlt,
+  FaPhoneAlt
 } from "react-icons/fa";
 import "animate.css";
 import logo from "../assets/Nirmaan - Vasai.jpg";
@@ -25,7 +27,7 @@ export default function ContactPage() {
   const [showPopup, setShowPopup] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   // Controlled form state
   const [formData, setFormData] = useState({
     name: "",
@@ -114,7 +116,7 @@ export default function ContactPage() {
       setShowPopup(true);
       setFormData({ name: "", phone: "", email: "", course: "", message: "" });
       setAgreedToTerms(false);
-      
+
       setTimeout(() => setShowPopup(false), 2500);
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -174,44 +176,44 @@ export default function ContactPage() {
               <h3>Send Message</h3>
 
               <form onSubmit={handleSubmit}>
-                <input 
-                  type="text" 
-                  name="name" 
-                  placeholder="Your Name" 
-                  value={formData.name} 
-                  onChange={handleChange} 
-                  required 
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                 />
-                <input 
-                  type="tel" 
-                  name="phone" 
-                  placeholder="Your Phone Number" 
-                  value={formData.phone} 
-                  onChange={handleChange} 
-                  required 
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Your Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
                 />
-                <input 
-                  type="email" 
-                  name="email" 
-                  placeholder="Your Email" 
-                  value={formData.email} 
-                  onChange={handleChange} 
-                  required 
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                 />
-                <input 
-                  type="text" 
-                  name="course" 
-                  placeholder="Course Interested" 
-                  value={formData.course} 
-                  onChange={handleChange} 
-                  required 
+                <input
+                  type="text"
+                  name="course"
+                  placeholder="Course Interested"
+                  value={formData.course}
+                  onChange={handleChange}
+                  required
                 />
-                <textarea 
-                  rows="4" 
-                  name="message" 
-                  placeholder="Your Message" 
-                  value={formData.message} 
-                  onChange={handleChange} 
+                <textarea
+                  rows="4"
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
                   required
                 ></textarea>
 
@@ -289,14 +291,17 @@ export default function ContactPage() {
               </p>
 
               <div className="d-flex gap-2">
-                <a href="#facebook" className="social-btn" aria-label="Facebook">
-                  <FaFacebookF />
+                <a href="https://t.me/+fZJqsFrZQJFIMGVI" className="social-btn" aria-label="Facebook">
+                  <FaTelegram />
                 </a>
-                <a href="#instagram" className="social-btn" aria-label="Instagram">
+                <a href="https://www.instagram.com/adaptedgeacademy?igsh=ZjN6cHB0aTVtaXYy" className="social-btn" aria-label="Instagram">
                   <FaInstagram />
                 </a>
-                <a href="#youtube" className="social-btn" aria-label="YouTube">
+                <a href="https://www.youtube.com/@minasharma9832" className="social-btn" aria-label="YouTube">
                   <FaYoutube />
+                </a>
+                <a href="https://whatsapp.com/channel/0029Vb7zMxx8kyyHrmlaol0q" className="social-btn" aria-label="YouTube">
+                  <FaWhatsapp />
                 </a>
               </div>
             </div>

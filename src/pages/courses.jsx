@@ -2,9 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
 import {
-  FaFacebookF,
   FaInstagram,
   FaYoutube,
+  FaTelegram,
+  FaWhatsapp,
   FaArrowRight,
   FaBookOpen,
   FaUserGraduate,
@@ -406,14 +407,17 @@ function Courses() {
 
               {/* Social Icons */}
               <div className="d-flex gap-2">
-                <a href="#facebook" className="social-btn" aria-label="Facebook">
-                  <FaFacebookF />
+                <a href="https://t.me/+fZJqsFrZQJFIMGVI" className="social-btn" aria-label="Facebook">
+                  <FaTelegram />
                 </a>
-                <a href="#instagram" className="social-btn" aria-label="Instagram">
+                <a href="https://www.instagram.com/adaptedgeacademy?igsh=ZjN6cHB0aTVtaXYy" className="social-btn" aria-label="Instagram">
                   <FaInstagram />
                 </a>
-                <a href="#youtube" className="social-btn" aria-label="YouTube">
+                <a href="https://www.youtube.com/@minasharma9832" className="social-btn" aria-label="YouTube">
                   <FaYoutube />
+                </a>
+                <a href="https://whatsapp.com/channel/0029Vb7zMxx8kyyHrmlaol0q" className="social-btn" aria-label="YouTube">
+                  <FaWhatsapp />
                 </a>
               </div>
             </div>
